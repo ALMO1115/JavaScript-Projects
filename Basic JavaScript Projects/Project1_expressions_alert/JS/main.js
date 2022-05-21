@@ -16,3 +16,13 @@ function My_First_Function () { //Defining a function and naming it
     var str = "This is the button text!"; //Defining a variable and giving it a string value
     document.getElementById("Button_Text").innerHTML  = str; //Putting the value of the variable into the HTML elementFromPoint with the "Button_Text" id
 }
+
+function bigImg(x) {
+    x.style.height = "64px";
+    x.style.width = "64px";
+  }
+  
+  function normalImg(x) {
+    x.style.height = "32px";
+    x.style.width = "32px";
+  }
