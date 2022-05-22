@@ -1,5 +1,7 @@
 document.write("90's Toys")
 
+document.getElementById("h1").style.color = "purple";
+
 function My_2nd_Function () {
     var Toy1 = "Tamagotchi";
     document.getElementById("Best 90s Toy").innerHTML=Toy1;
@@ -15,3 +17,4 @@ function myFunction() {
     sentence += " a lot from this class!";
     document.getElementById("Concatenate").innerHTML = sentence;
 }
+
