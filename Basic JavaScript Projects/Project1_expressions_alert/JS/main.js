@@ -7,6 +7,9 @@ document.write("Lyn said,\"Bean, I need 3\\4 cup sugar,\" to Rone."); //Practici
 document.write("Dawson is 11th , " + "James is 8th, " + "Pamella is 2nd."); //Practicing concatenating
 var C = "Hockey & " + "Football"
 document.write(C)
+document.write(A + B)
+var D = A + C
+document.write(D)
 
 var Family = "The Millers", Dad = "John", Mom = "Lee", Son = "Dawson", Son2 = "James", Daughter = "Lyn";
 document.write(Son2)
