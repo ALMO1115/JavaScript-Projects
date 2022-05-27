@@ -18,3 +18,73 @@ document.write(2E310);
 
 //example of displaying a negative infinite number
 document.write(-3E310);
+
+
+
+//
+document.write("-----------Using Boolean and console.log method:     ")
+//
+
+
+
+//example of Boolean logic displayed as T or F
+document.write(10>2);
+document.write(10<2);
+
+//displaying within the console in a browser (accessed in Dev Tools in browser)
+console.log(2+2);
+
+//displaying Boolean logic using console.log method
+console.log(10<2);
+
+//T or F using ==
+document.write(10==10);
+document.write(10==2);
+
+
+
+//
+document.write("----------Using = = =:     ")
+//
+
+
+
+//using the triple equal sign to display T or F for value and data types
+x = 86;
+y = 86;
+document.write(x===y);
+
+w = "86";
+z = 87;
+document.write(w===z);
+
+u = "13";
+v = 13;
+document.write(u===v);
+
+s = "Apple";
+t = "Orange";
+document.write(s===t);
+
+
+
+//
+document.write("-----------Using Boolean operators:    ")
+//
+
+
+
+document.write(5>10 && 10>4);  //AND operator
+document.write(5>4 && 10>4);
+
+document.write(5>10 || 10>4);  //OR operator
+document.write(5>10 || 10>20);
+
+//NOT operator
+function NOT_falseFunction () {
+    document.getElementById("NOTf").innerHTML = !(20>10);
+}
+
+function NOT_trueFunction () {
+    document.getElementById("NOTt").innerHTML = !(20<10);
+}
