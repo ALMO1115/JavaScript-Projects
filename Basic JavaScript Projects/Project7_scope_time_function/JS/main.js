@@ -58,7 +58,7 @@ function Time_function() {
     if (Time < 12 == Time > 0) {
         Reply = "It is morning time!";
     }
-    else if (Time >= 12 == time < 18) {
+    else if (Time >= 12 == Time < 18) {
         Reply = "It is afternoon.";
     }
     else {
