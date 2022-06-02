@@ -1,5 +1,5 @@
 function countdown() {
-    var seconds = document.getElementById("seconds").ariaValueMax;
+    var seconds = document.getElementById("seconds").value;
 
     function tick() {
         seconds = seconds -1;
