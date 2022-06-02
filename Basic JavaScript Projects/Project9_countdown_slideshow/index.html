@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="./CSS/main.css">
+    </head>
+    <body>
+        <p>How many seconds would you like to set your alarm for?</p>
+        <input id="seconds" value="" />
+        <button onclick="countdown()">Click Here</button>
+        <p id="timer"></p>
+
+    <!--SLIDESHOW CONTAINER-->
+        <div class="slideshow-container">
+            <!--FULL-WIDTH IMAGES WITH NUMBER AND CAPTION TEXT-->
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 5</div>
+                <img src="./images/1940svegas.jpg" alt="1940s Vegas aerial image" style="width:100%">
+                <div class="text">1940s Vegas</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 5</div>
+                <img src="./images/1960svegas.jpg" alt="1960s Vegas aerial image" style="width:100%">
+                <div class="text">1960s Vegas</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 5</div>
+                <img src="./images/1980svegas.jpg" alt="1980s Vegas aerial image" style="width:100%">
+                <div class="text">1980s Vegas</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">4 / 5</div>
+                <img src="./images/2000vegas.jpg" alt="2000s Vegas aerial image" style="width:100%">
+                <div class="text">2000s Vegas</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">5 / 5</div>
+                <img src="./images/2020svegas.jpg" alt="2020s Vegas aerial image" style="width:100%">
+                <div class="text">2020s Vegas</div>
+            </div>
+
+                <!-- NEXT AND PREVIOUS BUTTONS -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br>
+
+            <!-- DOTS/CIRCLES -->
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+                </div>
+            </div>
+            </div>
+
+        <script src="./JS/main.js"></script>
+    </body>
+</html>
