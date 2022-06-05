@@ -63,6 +63,7 @@ document.getElementById("break_Statement").innerHTML = text;
 
 //creating continue statement inside a loop (jumps over one interation in a loop and continues w/ the next iteration of the loop)
 for (let B=0; B<10; B++) {
+    if (B===3) {continue;}
     words += "The # is " + B + "<br>";
 }
 document.getElementById("continue_Statement").innerHTML = words;
