@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <title>Arrow Function</title>
+    </head>
+    <body>
+        <h1>Arrow Function</h1>
+        <p>This example calls a function which performs a calculation, and returns the result:</p>
+        <p id="demo"></p>
+        
+        <!--NORMAL FUNCTION
+        <script>
+            function myFunction(p1, p2) {
+                return p1 * p2;
+            }
+            document.getElementById("demo").innerHTML = myFunction(4, 3);
+        </script> -->
+
+        <!--same as above but as an ARROW FUNCTION-->
+        <script>
+            myFunction = (p1, p2) => p1 * p2;
+            document.getElementById("demo").innerHTML = myFunction(4, 3);
+        </script>
+
+    </body>
+</html>
