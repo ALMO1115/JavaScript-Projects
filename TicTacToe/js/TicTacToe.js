@@ -1,5 +1,5 @@
 //THIS VARIABLE KEEPS TRACK OF WHOSE TURN IT IS
-let activePlayer = "X";
+let activePlayer = "x";
 //THIS ARRAY STORES AN ARRAY OF MOVES. WE USE THIS TO DETERMINE WIN CONDITIONS
 let selectedSquares = [];
 //THIS FUNCTION IS FOR PLACING AN X OR O IN A SQUARE
@@ -10,7 +10,7 @@ function placeXOrO(squareNumber) {
         //THIS VARIABLE RETRIEVES THE HTML ELEMENT ID THAT WAS CLICKED
         let select = document.getElementById(squareNumber);
         //THIS CONDITION CHECKS WHOSE TURN IS IS
-        if (activePlayer === 'X') {
+        if (activePlayer === 'x') {
             //IF ACTIVEPLAYER IS EQUAL TO 'X', THE X.PNG IS PLACED IN HTML
             select.style.backgroundImage = 'url("images/dragonx.jpg")';
             //ACTIVE PLAYER MAY ONLY BE 'X' OR 'O' SO, IF NOT 'X' IT MUST BE 'O'
@@ -23,20 +23,20 @@ function placeXOrO(squareNumber) {
         //THIS CALLS A FUNCTION TO CHECK FOR ANY WIN CONDITIONS
         checkWinConditions();
         //THIS CONDITION IS FOR CHANGING THE ACTIVE PLAYER
-        if (activePlayer === 'X') {
+        if (activePlayer === 'x') {
             //IF ACTIVE PLAYER IS 'X' CHANGE IT TO 'O'
-            activePlayer = 'O';
+            activePlayer = 'o';
             //IF ACTIVE PLAYER IS ANYTHING OTHER THAN 'X'
         } else {
             //CHANGE THE ACTIVEPLAYER TO 'X'
-            activePlayer = 'X';
+            activePlayer = 'x';
         }
 
 
         //THIS FUNCTION PLAYS PLACEMENT SOUND
-        Audio('./media/place2.flac');
+        audio('./media/place2.flac');
         //THIS CONDITION CHECKS TO SEE IF IT IS COMPUTERS TURN
-        if(activePlayer === 'O'){
+        if(activePlayer === 'o'){
             //THIS FUNCTION DISABLES CLICKING FOR COMPUTER CHOICE
             disableClick();
             //THIS FUNCTION WAITS 1 SECOND BEFORE COMPUTER PLACES IMAGE AND ENABLES CLICK
@@ -70,33 +70,33 @@ function placeXOrO(squareNumber) {
 //drawWinline function is called to draw line if condition is met
 function checkWinConditions() {
     // X 0, 1, 2 condition.
-    if (arrayIncludes('OX', '1X', '2X')) { drawWinline(50, 100, 558, 100) }
+    if (arrayIncludes('0x', '1x', '2x')) { drawWinline(50, 100, 558, 100) }
     // X 3, 4, 5 condition.
-    else if (arrayIncludes('3X', '4X', '5X')) { drawWinLine(50, 304, 558, 304) }
+    else if (arrayIncludes('3x', '4x', '5x')) { drawWinLine(50, 304, 558, 304) }
     // X 6, 7, 8 condition.
-    else if (arrayIncludes('6X', '7X', '8X')) { drawWinLine(50, 508, 558, 508) }
+    else if (arrayIncludes('6x', '7x', '8x')) { drawWinLine(50, 508, 558, 508) }
     // X 0, 3, 6 condition.
-    else if (arrayIncludes('0X', '3X', '6X')) { drawWinLine(100, 50, 100, 558) }
+    else if (arrayIncludes('0x', '3x', '6x')) { drawWinLine(100, 50, 100, 558) }
     // X 1, 4, 7 condition.
-    else if (arrayIncludes('1X', '4X', '7X')) { drawWinLine(304, 50, 304, 558) }
+    else if (arrayIncludes('1x', '4x', '7x')) { drawWinLine(304, 50, 304, 558) }
     // X 2, 5, 8 condition.
-    else if (arrayIncludes('2X', '5X', '8X')) { drawWinLine(508, 50, 508, 558) }
+    else if (arrayIncludes('2x', '5x', '8x')) { drawWinLine(508, 50, 508, 558) }
     // X 6, 4, 2 condition.
-    else if (arrayIncludes('6X', '4X', '2X')) { drawWinLine(100, 508, 510, 90) }
+    else if (arrayIncludes('6x', '4x', '2x')) { drawWinLine(100, 508, 510, 90) }
     // X 0, 4, 8 condition.
-    else if (arrayIncludes('OX', '4X', '8X')) { drawWinLine(100, 100, 520, 520) }
+    else if (arrayIncludes('0x', '4x', '8x')) { drawWinLine(100, 100, 520, 520) }
     // O 0, 1, 2 condition.
-    else if (arrayIncludes('00', '10', '20')) { drawWinLine(50, 100, 558, 100) }
+    else if (arrayIncludes('0o', '1o', '2o')) { drawWinLine(50, 100, 558, 100) }
     // O 3, 4, 5 condition.
-    else if (arrayIncludes('30', '40', '50')) { drawWinLine(50, 304, 558, 304) }
+    else if (arrayIncludes('3o', '4o', '5o')) { drawWinLine(50, 304, 558, 304) }
     else if (arrayIncludes('60', '70', '80')) { drawWinLine(50, 508, 558, 508) }
     // O 0, 3, 6 condition.
-    else if (arrayIncludes('00', '30', '60')) { drawWinLine(100, 50, 100, 558) }
+    else if (arrayIncludes('0o', '3o', '6o')) { drawWinLine(100, 50, 100, 558) }
     // O 1, 4, 7 condition
-    else if (arrayIncludes('10', '40', '70')) { drawWinLine(304, 50, 304, 558) }
+    else if (arrayIncludes('1o', '4o', '7o')) { drawWinLine(304, 50, 304, 558) }
     else if (arrayIncludes('60', '40', '20')) { drawWinLine(100, 508, 510, 90) }
     // O 0, 4, 8 condition.
-    else if (arrayIncludes('00', '40', '80')) { drawWinLine(100, 100, 520, 520) }
+    else if (arrayIncludes('0o', '4o', '8o')) { drawWinLine(100, 100, 520, 520) }
     // This condition checks for tie. If none of the above conditions register and 9
     //squares are selected the code executes.
     else if (selectedSquares.length >= 9) {
@@ -138,21 +138,21 @@ function audio(audioURL) {
 
 
 //This function utilizes html canvas to draw win lines.
-function drawWinLine(coordXl, coordYl, coordX2, coordY2) {
+function drawWinLine(coordx1, coordy1, coordx2, coordy2) {
     //This line accesses our html canvas element.
     const canvas = document. getElementById('win-lines')
     //This line gives us access to methods and properties to use on canvas
     const c = canvas.getContext('2d');
     //This line indicates where the start of a lines x axis is.
-    let xl = coordXl,
+    let x1 = coordx1,
         //This line indicates where the start of a lines y axis is
-        yl = coordyl,
+        yl = coordy1,
         //This line indicates where the end of a lines x axis is.
-        x2 = coordX2,
+        x2 = coordx2,
         //This line indicates where the end of a lines x axis is.
-        y2 = coordY2,
+        y2 = coordy2,
         //This variable stores temporary x axis data we update in our animation loop.
-        x = xl,
+        x = x1,
         //This variable stores temporary y axis data we update in our animation loop
         y = yl;
     
@@ -166,7 +166,7 @@ function drawWinLine(coordXl, coordYl, coordX2, coordY2) {
     //This method starts a new path
     c.beginPath();
     // This method moves us to a starting point for our line.
-    c.moveTo(xl, y1)
+    c.moveTo(x1, y1)
     // This method indicates the end point in our line.
     c.lineTo(x, y)
     // This method sees she width of our line
@@ -176,7 +176,7 @@ function drawWinLine(coordXl, coordYl, coordX2, coordY2) {
     //This method draws everything we laid out above.
     c.stroke();
     //This condition checks if we've reached the endpoint.
-    if (xl <= x2 && y1 <= y2) {
+    if (x1 <= x2 && y1 <= y2) {
     //This condition adds 10 to the previous end x point
         if (x < x2) { x += 10; }
         //This condition adds 10 to the previous end y point
@@ -217,7 +217,7 @@ function drawWinLine(coordXl, coordYl, coordX2, coordY2) {
 //this function resets the game in the event of a tie or a win
 function resetGame() {
     //this for loop iterates trhough each HTML square element
-    for (let i = O; i < 9; i++) {
+    for (let i = 0; i < 9; i++) {
         //this variable gets the html element of 1
         let square = document.getElementById(String(i))
         //this removes our elements backgroundImage
