@@ -39,18 +39,21 @@ window.onload = function() { //adding an image
     var ctx = c.getContext("2d");
     var img = document.getElementById("sanrio");
     ctx.drawImage(img, 10, 10, 250, 250); //last 2 #s are size of image inside canvas - not sure what 1st 2 #s are?s
-  };
 
+//Canvas 3 needs to use different variable name from Canvas 1 to reference it, and need to have the code inside the same function as the other canvas or can tie it to a button to have it created when you click that button instead of when the page loads
 //creating a gradient background inside of a canvas element
 var e = document.getElementById("myCanvas3");
-var ctx = c.getContext("2d");
+//had to change ctx to etx to help with errors i was having
+var etx = e.getContext("2d");
 
-var grd = ctx.createLinearGradient(0,0,170,0);
+var grd = etx.createLinearGradient(0,0,170,0);
 grd.addColorStop(0, "black");
 grd.addColorStop(1, "white");
 
-ctx.fillStyle = grd;
-ctx.fillRect(20, 20, 150, 100);
+etx.fillStyle = grd;
+etx.fillRect(20, 20, 150, 100);
+    }; //and moved this from where i originall had it right after ctx.drawImage above per instructors response
+
 
 //window.onload = function() {
 //    var c = document.getElementById("myCanvas2"); //fills canvas container with color
