@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<div id="demo">
+<h1>The XMLHttpRequest Object</h1>
+<button type="button" onclick="loadDoc()">Change Content</button>
+</div>
+
+<script>
+function loadDoc() {
+  var xhttp = new XMLHttpRequest(); //created variable for request
+  xhttp.onreadystatechange = function() { //when state changes, this function is called
+    if (this.readyState == 4 && this.status == 200) { //if the readyState is equal to 4(which means the request has been finished and the response from server is ready) and if the status is 200(which means everything was able to be retrieved ok) --- can learn more here https://www.w3schools.com/xml/ajax_xmlhttprequest_response.asp
+      //then the portion of the HTML document labeled "demo" (in this case it is a div ID) will be changed into this.responseText-which ends up being the .txt file labeled below, ajax_info.txt)
+      document.getElementById("demo").innerHTML =
+      this.responseText;
+    }
+  };
+  xhttp.open("GET", "ajax_info.txt", true); //here is the actual function "GET"ting the ajax_info.txt file
+  xhttp.send(); //and then sending it back to the browser/client to display the change on the HTML document
+}
+</script>
+
+</body>
+</html>

@@ -19,8 +19,9 @@ div {
 
 #menuBG { /* the # calls on "names within quotes" like an ID selector*/
     width: 400px;
-    height: 470px;
+    height: 600px;
     margin: 10px auto;
+    margin-bottom: 25px;
 }
 
 #fromMenu { /*this is the size of the divs together to make up the menu categories*/
